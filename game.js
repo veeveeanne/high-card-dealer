@@ -23,14 +23,16 @@ class Game {
     return hand
   }
 
-  gameResult(player1, player2) {
+  gameResult(player1, player2, playerName) {
+    let winner
     if (player1.value > player2.value) {
-      return "Player 1 Won"
+      winner = playerName
     } else if (player2.value > player1.value) {
-      return "Player 2 Won"
+      winner = "The Computer"
     } else {
-      return "TIE!"
+      return "It's a TIE!"
     }
+    return `${winner} Won!`
   }
 }
 
