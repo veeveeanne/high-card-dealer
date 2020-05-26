@@ -22,6 +22,14 @@ class Hand {
     this.value = value
     return this.value
   }
+
+  showCards() {
+    let cards = []
+    this.cards.forEach((card) => {
+      cards.push(`${card.suit}${card.rank}`)
+    })
+    return cards.join(', ')
+  }
 }
 
 module.exports = Hand
